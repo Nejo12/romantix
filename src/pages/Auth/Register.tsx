@@ -40,10 +40,10 @@ export default function RegisterPage({ onSwitch, onSuccess }: RegisterPageProps)
       exit={{ opacity: 0, x: -20 }}
     >
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-white mb-2 text-display italic">
+        <h1 className="text-3xl font-light text-white mb-2 italic" style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif" }}>
           Create Account
         </h1>
-        <p className="text-gray-400 text-sm">Join ROMANTIX today</p>
+        <p className="text-gray-400 text-sm">Join romanti.X today</p>
       </div>
 
       <div className="grid grid-cols-2 gap-4">

@@ -45,7 +45,7 @@ export default function LoginPage({ onSwitch, onSuccess }: LoginPageProps) {
       exit={{ opacity: 0, x: 20 }}
     >
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-white mb-2 text-display italic">
+        <h1 className="text-3xl font-light text-white mb-2 italic" style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif" }}>
           Welcome Back
         </h1>
         <p className="text-gray-400 text-sm">Enter your credentials to continue</p>

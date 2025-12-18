@@ -9,18 +9,54 @@ export function Header({ cartCount }: HeaderProps) {
     <header className="sticky top-0 z-50" style={{ background: 'rgba(13, 8, 18, 0.85)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <motion.h1
-          className="text-xl font-bold tracking-[0.15em]"
+          className="text-2xl font-light flex items-center"
           style={{
-            fontFamily: 'Georgia, serif',
-            background: 'linear-gradient(135deg, #ff2d8a 0%, #8b3dff 50%, #ff2d8a 100%)',
-            backgroundSize: '200% auto',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
+            fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
+            fontStyle: 'italic',
+            letterSpacing: '0.08em',
           }}
-          animate={{ backgroundPosition: ['0% center', '200% center'] }}
-          transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
         >
-          ROMANTIX
+          <span
+            style={{
+              background: 'linear-gradient(135deg, #ff2d8a 0%, #8b3dff 50%, #ff2d8a 100%)',
+              backgroundSize: '200% auto',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            romanti
+          </span>
+          <motion.span
+            style={{
+              color: '#ef4444',
+              display: 'inline-block',
+              fontSize: '1.4em',
+              lineHeight: 0.7,
+            }}
+            animate={{
+              x: [0, 2, -2, 1, -1, 0],
+              y: [0, -5, -3, -6, -2, 0],
+              rotate: [0, -3, 2, -1, 1, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+            }}
+          >
+            .
+          </motion.span>
+          <span
+            style={{
+              background: 'linear-gradient(135deg, #ff2d8a 0%, #8b3dff 50%, #ff2d8a 100%)',
+              backgroundSize: '200% auto',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            X
+          </span>
         </motion.h1>
 
         <nav className="hidden md:flex items-center gap-6">

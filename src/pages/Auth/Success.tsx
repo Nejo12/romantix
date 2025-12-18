@@ -23,7 +23,7 @@ export default function SuccessPage({ onContinue }: SuccessPageProps) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
         </svg>
       </motion.div>
-      <h2 className="text-2xl font-bold text-white mb-2 text-display">Welcome to ROMANTIX!</h2>
+      <h2 className="text-2xl font-light text-white mb-2 italic" style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif" }}>Welcome to romanti.X!</h2>
       <p className="text-gray-400 mb-6">Your account has been created successfully.</p>
       <Button onClick={onContinue}>Continue to Dashboard</Button>
     </motion.div>

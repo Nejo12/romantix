@@ -14,8 +14,9 @@ export function Hero() {
       <motion.h2
         className="text-4xl sm:text-5xl md:text-6xl mb-5"
         style={{
-          fontFamily: 'Georgia, serif',
+          fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
           fontStyle: 'italic',
+          fontWeight: 300,
           background: 'linear-gradient(135deg, #ff2d8a 0%, #fff 40%, #8b3dff 70%, #ff2d8a 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
