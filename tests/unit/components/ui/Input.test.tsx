@@ -61,9 +61,9 @@ describe('Input Component', () => {
   });
 
   it('applies custom className', () => {
-    render(<Input label="Test" className="custom-class" />);
-    const inputWrapper = screen.getByRole('textbox').parentElement;
-    expect(inputWrapper).toHaveClass('custom-class');
+    const { container } = render(<Input label="Test" className="custom-class" />);
+    const wrapper = container.querySelector('.space-y-2');
+    expect(wrapper).toHaveClass('custom-class');
   });
 
   it('forwards ref correctly', () => {

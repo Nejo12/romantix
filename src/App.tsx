@@ -1,4 +1,7 @@
-import { LandingPage } from '@/pages/Home';
+import { QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { AppRouter } from '@/router'
+import { queryClient } from '@/lib/queryClient'
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ROMANTIX — Main Application
@@ -6,5 +9,10 @@ import { LandingPage } from '@/pages/Home';
 // ═══════════════════════════════════════════════════════════════════════════
 
 export default function App() {
-  return <LandingPage />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AppRouter />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  )
 }

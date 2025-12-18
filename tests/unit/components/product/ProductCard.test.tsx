@@ -11,8 +11,16 @@ const mockProduct: Product = {
   price: 1999,
   compareAtPrice: 2499,
   image: 'https://example.com/image.jpg',
+  hoverImage: 'https://example.com/hover.jpg',
   badges: ['new', 'sale'],
-  specs: '165cm • 32kg • D-Cup',
+  specs: {
+    height: '165',
+    weight: '32',
+    cup: 'D',
+    material: 'Silicone',
+  },
+  collection: 'fantasy',
+  color: 'pink',
 };
 
 describe('ProductCard Component', () => {
@@ -96,10 +104,13 @@ describe('ProductCard Component', () => {
   });
 
   it('renders without specs when not provided', () => {
-    const productWithoutSpecs = { ...mockProduct, specs: undefined };
-    render(<ProductCard product={productWithoutSpecs} onAdd={vi.fn()} />);
-    expect(screen.queryByText('165cm • 32kg • D-Cup')).not.toBeInTheDocument();
-  });
+    const productWithoutSpecs: Partial<Product> & Omit<Product, 'specs'> = {
+      ...mockProduct,
+      specs: undefined as unknown as Product['specs'],
+    }
+    render(<ProductCard product={productWithoutSpecs as Product} onAdd={vi.fn()} />)
+    expect(screen.queryByText(/165cm/)).not.toBeInTheDocument()
+  })
 
   it('renders add to cart button with icon', () => {
     const { container } = render(<ProductCard product={mockProduct} onAdd={vi.fn()} />);

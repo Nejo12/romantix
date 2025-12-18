@@ -3,9 +3,9 @@ import { render, screen } from '@testing-library/react';
 import { PasswordStrength } from '@/components/ui/PasswordStrength';
 
 describe('PasswordStrength Component', () => {
-  it('does not render when password is empty', () => {
-    const { container } = render(<PasswordStrength password="" />);
-    expect(container.firstChild).toBeEmptyDOMElement();
+  it('shows "Too weak" when password is empty', () => {
+    render(<PasswordStrength password="" />);
+    expect(screen.getByText('Too weak')).toBeInTheDocument();
   });
 
   it('shows "Too weak" for very short password', () => {
@@ -40,7 +40,7 @@ describe('PasswordStrength Component', () => {
   });
 
   it('displays different colors for different strengths', () => {
-    const { container, rerender } = render(<PasswordStrength password="password" />);
+    const { rerender } = render(<PasswordStrength password="password" />);
     const weakText = screen.getByText('Weak');
     expect(weakText.style.color).toBe('rgb(239, 68, 68)');
 

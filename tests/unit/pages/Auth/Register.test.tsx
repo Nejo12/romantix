@@ -13,12 +13,12 @@ describe('RegisterPage', () => {
 
   it('renders registration form', () => {
     render(<RegisterPage onSwitch={mockOnSwitch} onSuccess={mockOnSuccess} />);
-    expect(screen.getByText('Create Account')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Create Account' })).toBeInTheDocument();
   });
 
   it('displays subtitle', () => {
     render(<RegisterPage onSwitch={mockOnSwitch} onSuccess={mockOnSuccess} />);
-    expect(screen.getByText('Join ROMANTIX today')).toBeInTheDocument();
+    expect(screen.getByText('Join romanti.X today')).toBeInTheDocument();
   });
 
   it('renders all form fields', () => {

@@ -1,14 +1,20 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 export interface FloatingOrbProps {
-  color: string;
-  size: number;
-  x: string;
-  y: string;
-  duration: number;
+  color: string
+  size: number
+  x: string
+  y: string
+  duration: number
 }
 
-export const FloatingOrb = ({ color, size, x, y, duration }: FloatingOrbProps) => (
+export const FloatingOrb = ({
+  color,
+  size,
+  x,
+  y,
+  duration,
+}: FloatingOrbProps) => (
   <motion.div
     className="absolute rounded-full pointer-events-none"
     style={{
@@ -30,4 +36,4 @@ export const FloatingOrb = ({ color, size, x, y, duration }: FloatingOrbProps) =
       ease: 'easeInOut',
     }}
   />
-);
+)

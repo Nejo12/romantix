@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 const features = [
   { icon: '🔒', title: '100% Discreet', desc: 'Anonymous delivery' },
   { icon: '✨', title: 'Premium Quality', desc: 'Medical-grade materials' },
   { icon: '🚚', title: 'Free Shipping', desc: 'Orders over €500' },
   { icon: '💫', title: 'Customizable', desc: 'Build your dream' },
-];
+]
 
 export function Features() {
   return (
@@ -15,12 +15,18 @@ export function Features() {
           <motion.div
             key={i}
             className="text-center p-5 rounded-xl"
-            style={{ background: 'rgba(30, 20, 40, 0.4)', border: '1px solid rgba(255,255,255,0.04)' }}
+            style={{
+              background: 'rgba(30, 20, 40, 0.4)',
+              border: '1px solid rgba(255,255,255,0.04)',
+            }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            whileHover={{ background: 'rgba(30, 20, 40, 0.7)', borderColor: 'rgba(255, 45, 138, 0.15)' }}
+            whileHover={{
+              background: 'rgba(30, 20, 40, 0.7)',
+              borderColor: 'rgba(255, 45, 138, 0.15)',
+            }}
           >
             <div className="text-2xl mb-2">{f.icon}</div>
             <h4 className="text-white text-sm font-semibold mb-1">{f.title}</h4>
@@ -29,5 +35,5 @@ export function Features() {
         ))}
       </div>
     </section>
-  );
+  )
 }

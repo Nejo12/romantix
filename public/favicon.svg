@@ -1,0 +1,72 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Metallic gradient for heart -->
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#ec4899" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#f472b6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2d8a" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#8b3dff" />
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="4" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Glossy highlight -->
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Heart shape with shadow -->
+  <path
+    d="M60,20 C50,20 42,25 38,32 C35,28 30,25 25,28 C20,25 15,30 15,38 C15,45 22,52 35,60 L60,75 L85,60 C98,52 105,45 105,38 C105,30 100,25 95,28 C90,25 85,28 82,32 C78,25 70,20 60,20 Z"
+    fill="url(#heartGradient)"
+    filter="url(#shadow)"
+    stroke="rgba(255, 255, 255, 0.2)"
+    stroke-width="0.5"
+  />
+
+  <!-- Glossy highlight overlay -->
+  <path
+    d="M60,20 C50,20 42,25 38,32 C35,28 30,25 25,28 C20,25 15,30 15,38 C15,45 22,52 35,60 L60,75 L85,60 C98,52 105,45 105,38 C105,30 100,25 95,28 C90,25 85,28 82,32 C78,25 70,20 60,20 Z"
+    fill="url(#highlight)"
+    opacity="0.6"
+  />
+
+  <!-- Text: romanti.X -->
+  <text
+    x="60"
+    y="50"
+    text-anchor="middle"
+    font-size="16"
+    font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+    font-style="italic"
+    font-weight="300"
+    fill="url(#textGradient)"
+    letter-spacing="0.05em"
+  >
+    <tspan x="60" dy="0">romanti</tspan>
+    <tspan fill="#ef4444">.</tspan>
+    <tspan fill="url(#textGradient)">X</tspan>
+  </text>
+</svg>
+

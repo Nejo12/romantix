@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export function Hero() {
   return (
@@ -14,10 +15,12 @@ export function Hero() {
       <motion.h2
         className="text-4xl sm:text-5xl md:text-6xl mb-5"
         style={{
-          fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
+          fontFamily:
+            "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
           fontStyle: 'italic',
           fontWeight: 300,
-          background: 'linear-gradient(135deg, #ff2d8a 0%, #fff 40%, #8b3dff 70%, #ff2d8a 100%)',
+          background:
+            'linear-gradient(135deg, #ff2d8a 0%, #fff 40%, #8b3dff 70%, #ff2d8a 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           filter: 'drop-shadow(0 0 30px rgba(255, 45, 138, 0.25))',
@@ -36,7 +39,8 @@ export function Hero() {
         transition={{ delay: 0.3 }}
       >
         Handcrafted with premium materials. Designed for ultimate realism.
-        Delivered with <span className="text-pink-400">complete discretion</span>.
+        Delivered with{' '}
+        <span className="text-pink-400">complete discretion</span>.
       </motion.p>
 
       <motion.div
@@ -45,25 +49,47 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
-        <motion.button
-          className="px-7 py-3 rounded-full text-white text-sm font-semibold uppercase tracking-wider"
-          style={{ background: 'linear-gradient(135deg, #ff2d8a, #e6006f)', boxShadow: '0 0 25px rgba(255, 45, 138, 0.4)' }}
-          whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(255, 45, 138, 0.5)' }}
-          whileTap={{ scale: 0.95 }}
-          animate={{ boxShadow: ['0 0 20px rgba(255, 45, 138, 0.3)', '0 0 35px rgba(255, 45, 138, 0.5)', '0 0 20px rgba(255, 45, 138, 0.3)'] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          Explore Collection
-        </motion.button>
+        <Link to="/products">
+          <motion.button
+            className="px-7 py-3 rounded-full text-white text-sm font-semibold uppercase tracking-wider"
+            style={{
+              background: 'linear-gradient(135deg, #ff2d8a, #e6006f)',
+              boxShadow: '0 0 25px rgba(255, 45, 138, 0.4)',
+            }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: '0 0 40px rgba(255, 45, 138, 0.5)',
+            }}
+            whileTap={{ scale: 0.95 }}
+            animate={{
+              boxShadow: [
+                '0 0 20px rgba(255, 45, 138, 0.3)',
+                '0 0 35px rgba(255, 45, 138, 0.5)',
+                '0 0 20px rgba(255, 45, 138, 0.3)',
+              ],
+            }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            Explore Collection
+          </motion.button>
+        </Link>
 
-        <motion.button
-          className="px-7 py-3 rounded-full text-pink-400 text-sm font-semibold uppercase tracking-wider"
-          style={{ background: 'transparent', border: '1px solid rgba(255, 45, 138, 0.4)' }}
-          whileHover={{ background: 'rgba(255, 45, 138, 0.1)', borderColor: 'rgba(255, 45, 138, 0.7)' }}
-        >
-          Configure Dream
-        </motion.button>
+        <Link to="/register">
+          <motion.button
+            className="px-7 py-3 rounded-full text-pink-400 text-sm font-semibold uppercase tracking-wider"
+            style={{
+              background: 'transparent',
+              border: '1px solid rgba(255, 45, 138, 0.4)',
+            }}
+            whileHover={{
+              background: 'rgba(255, 45, 138, 0.1)',
+              borderColor: 'rgba(255, 45, 138, 0.7)',
+            }}
+          >
+            Get Started
+          </motion.button>
+        </Link>
       </motion.div>
     </section>
-  );
+  )
 }

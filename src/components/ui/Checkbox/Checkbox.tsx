@@ -1,21 +1,37 @@
-import { motion } from 'framer-motion';
+import { useId } from 'react'
+import { motion } from 'framer-motion'
 
 export interface CheckboxProps {
-  label: string;
-  checked: boolean;
-  onChange: (checked: boolean) => void;
+  label: string
+  checked: boolean
+  onChange: (checked: boolean) => void
 }
 
 export const Checkbox = ({ label, checked, onChange }: CheckboxProps) => {
+  const id = useId()
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.stopPropagation()
+    onChange(!checked)
+  }
   return (
-    <label className="flex items-center gap-3 cursor-pointer group">
+    <label
+      htmlFor={id}
+      className="flex items-center gap-3 cursor-pointer group"
+    >
+      <input
+        id={id}
+        type="checkbox"
+        checked={checked}
+        onChange={handleChange}
+        className="hidden"
+        aria-label={label}
+      />
       <div
         className={`w-5 h-5 rounded flex items-center justify-center transition-all ${
           checked
             ? 'bg-gradient-to-br from-primary-500 to-purple-500'
             : 'bg-white/5 border border-white/20'
         }`}
-        onClick={() => onChange(!checked)}
       >
         {checked && (
           <motion.svg
@@ -39,5 +55,5 @@ export const Checkbox = ({ label, checked, onChange }: CheckboxProps) => {
         {label}
       </span>
     </label>
-  );
-};
+  )
+}

@@ -12,7 +12,7 @@ describe('SuccessPage', () => {
 
   it('renders success message', () => {
     render(<SuccessPage onContinue={mockOnContinue} />);
-    expect(screen.getByText('Welcome to ROMANTIX!')).toBeInTheDocument();
+    expect(screen.getByText('Welcome to romanti.X!')).toBeInTheDocument();
   });
 
   it('displays success description', () => {
@@ -41,7 +41,7 @@ describe('SuccessPage', () => {
 
   it('checkmark is in a green gradient circle', () => {
     const { container } = render(<SuccessPage onContinue={mockOnContinue} />);
-    const circle = container.querySelector('[style*="linear-gradient(135deg, #10b981, #14b8a6)"]');
+    const circle = container.querySelector('[style*="linear-gradient(135deg, rgb(16, 185, 129), rgb(20, 184, 166))"]');
     expect(circle).toBeInTheDocument();
   });
 
@@ -52,13 +52,13 @@ describe('SuccessPage', () => {
   });
 
   it('heading uses display font', () => {
-    const { container } = render(<SuccessPage onContinue={mockOnContinue} />);
-    const heading = screen.getByText('Welcome to ROMANTIX!');
-    expect(heading).toHaveClass('text-display');
+    render(<SuccessPage onContinue={mockOnContinue} />);
+    const heading = screen.getByText('Welcome to romanti.X!');
+    expect(heading.style.fontFamily).toContain('Cormorant Garamond');
   });
 
   it('description has gray color', () => {
-    const { container } = render(<SuccessPage onContinue={mockOnContinue} />);
+    render(<SuccessPage onContinue={mockOnContinue} />);
     const description = screen.getByText('Your account has been created successfully.');
     expect(description).toHaveClass('text-gray-400');
   });

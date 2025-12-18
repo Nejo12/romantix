@@ -110,10 +110,11 @@ describe('LoginPage', () => {
 
     await user.type(screen.getByLabelText('Email'), 'test@example.com');
     await user.type(screen.getByLabelText('Password'), 'password123');
-    await user.click(screen.getByRole('button', { name: /sign in/i }));
+    const submitButton = screen.getByRole('button', { name: /sign in/i });
+    await user.click(submitButton);
 
-    const button = screen.getByRole('button', { name: /sign in/i });
-    expect(button).toBeDisabled();
+    // Button is disabled during loading (text is replaced with spinner)
+    expect(submitButton).toBeDisabled();
   });
 
   it('email input has correct type', () => {

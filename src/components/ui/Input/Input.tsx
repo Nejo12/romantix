@@ -1,9 +1,10 @@
-import type { InputHTMLAttributes, ReactNode } from 'react';
+import { useId } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  error?: string;
-  icon?: ReactNode;
+  label?: string
+  error?: string
+  icon?: ReactNode
 }
 
 export const Input = ({
@@ -15,10 +16,11 @@ export const Input = ({
   className = '',
   ...props
 }: InputProps) => {
+  const id = useId()
   return (
-    <div className="space-y-2">
+    <div className={`space-y-2 ${className}`}>
       {label && (
-        <label className="text-sm text-gray-300 font-medium">
+        <label htmlFor={id} className="text-sm text-gray-300 font-medium">
           {label}
         </label>
       )}
@@ -29,18 +31,19 @@ export const Input = ({
           </span>
         )}
         <input
+          id={id}
           type={type}
           placeholder={placeholder}
           className={`w-full ${icon ? 'pl-12' : 'pl-4'} pr-4 py-3.5 rounded-xl text-white placeholder-gray-500 transition-all duration-300 outline-none ${
             error
               ? 'bg-red-500/10 border border-red-500/50 focus:border-red-500'
               : 'bg-white/5 border border-white/10 focus:border-primary-500/50 focus:bg-white/10'
-          } ${className}`}
+          }`}
           style={{ backdropFilter: 'blur(8px)' }}
           {...props}
         />
       </div>
       {error && <p className="text-red-400 text-xs">{error}</p>}
     </div>
-  );
-};
+  )
+}
