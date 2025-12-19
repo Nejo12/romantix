@@ -18,7 +18,7 @@ export function Header({ cartCount }: HeaderProps) {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <Link to="/">
           <motion.h1
-            className="text-2xl font-light flex items-center cursor-pointer"
+            className="text-6xl font-light flex items-center cursor-pointer"
             style={{
               fontFamily:
                 "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
