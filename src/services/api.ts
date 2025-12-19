@@ -9,6 +9,14 @@ import type {
   User,
 } from '@/types/api'
 import type { Product } from '@/types/product'
+import redHeadImage from '@/assets/red-head.jpg'
+import slimImage from '@/assets/slim.jpg'
+import blackWhiteImage from '@/assets/black-white.png'
+import farmImage from '@/assets/farm.png'
+import poseImage from '@/assets/pose.png'
+import roseImage from '@/assets/rose.png'
+import shyImage from '@/assets/shy.png'
+import waterImage from '@/assets/water.png'
 
 // Mock delay to simulate network request
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
@@ -21,10 +29,8 @@ const mockProducts: Product[] = [
     brand: 'romanti.X Elite',
     price: 1899,
     compareAtPrice: 2299,
-    image:
-      'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop',
+    image: redHeadImage,
+    hoverImage: redHeadImage,
     badges: ['bestseller'],
     specs: { height: '165', weight: '32', cup: 'D', material: 'silicone' },
     collection: 'premium',
@@ -35,10 +41,8 @@ const mockProducts: Product[] = [
     name: 'Bella Fantasy Collection',
     brand: 'romanti.X',
     price: 2499,
-    image:
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=600&h=800&fit=crop',
+    image: slimImage,
+    hoverImage: slimImage,
     badges: ['new', 'limited'],
     specs: { height: '168', weight: '35', cup: 'E', material: 'silicone' },
     collection: 'fantasy',
@@ -50,10 +54,8 @@ const mockProducts: Product[] = [
     brand: 'romanti.X',
     price: 1299,
     compareAtPrice: 1699,
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1496440737103-cd596325d314?w=600&h=800&fit=crop',
+    image: blackWhiteImage,
+    hoverImage: blackWhiteImage,
     badges: ['sale'],
     specs: { height: '158', weight: '28', cup: 'C', material: 'tpe' },
     collection: 'sensual',
@@ -64,10 +66,8 @@ const mockProducts: Product[] = [
     name: 'Sakura Anime Edition',
     brand: 'romanti.X Fantasy',
     price: 1599,
-    image:
-      'https://images.unsplash.com/photo-1512310604669-443f26c35f52?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=600&h=800&fit=crop',
+    image: farmImage,
+    hoverImage: farmImage,
     badges: ['new'],
     specs: { height: '155', weight: '26', cup: 'B', material: 'silicone' },
     collection: 'anime',
@@ -78,10 +78,8 @@ const mockProducts: Product[] = [
     name: 'Venus Goddess Curves',
     brand: 'romanti.X Curves',
     price: 1799,
-    image:
-      'https://images.unsplash.com/photo-1513094735237-8f2714d57c13?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&h=800&fit=crop',
+    image: poseImage,
+    hoverImage: poseImage,
     badges: ['bestseller'],
     specs: { height: '162', weight: '38', cup: 'F', material: 'tpe' },
     collection: 'curvy',
@@ -93,10 +91,8 @@ const mockProducts: Product[] = [
     brand: 'romanti.X',
     price: 999,
     compareAtPrice: 1299,
-    image:
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1475669698648-2f144fcaaeb1?w=600&h=800&fit=crop',
+    image: roseImage,
+    hoverImage: roseImage,
     badges: ['sale'],
     specs: { height: '148', weight: '22', cup: 'A', material: 'tpe' },
     collection: 'petite',
@@ -107,10 +103,8 @@ const mockProducts: Product[] = [
     name: 'Scarlett Premium Plus',
     brand: 'romanti.X Elite',
     price: 2899,
-    image:
-      'https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=800&fit=crop',
+    image: shyImage,
+    hoverImage: shyImage,
     badges: ['exclusive'],
     specs: { height: '170', weight: '36', cup: 'D', material: 'silicone' },
     collection: 'premium',
@@ -121,10 +115,8 @@ const mockProducts: Product[] = [
     name: 'Mika Anime Star',
     brand: 'romanti.X Fantasy',
     price: 1449,
-    image:
-      'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=800&fit=crop',
+    image: waterImage,
+    hoverImage: waterImage,
     badges: ['new'],
     specs: { height: '152', weight: '24', cup: 'B', material: 'silicone' },
     collection: 'anime',

@@ -7,6 +7,10 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ProductCard } from '@/components/product/ProductCard'
 import type { Product } from '@/types'
+import redHeadImage from '@/assets/red-head.jpg'
+import slimImage from '@/assets/slim.jpg'
+import blackWhiteImage from '@/assets/black-white.png'
+import farmImage from '@/assets/farm.png'
 
 // Demo products
 const products: Product[] = [
@@ -16,10 +20,8 @@ const products: Product[] = [
     brand: 'ROMANTIX Elite',
     price: 1899,
     compareAtPrice: 2299,
-    image:
-      'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop',
+    image: redHeadImage,
+    hoverImage: redHeadImage,
     badges: ['bestseller'],
     specs: { height: '165', weight: '32', cup: 'D', material: 'silicone' },
     collection: 'premium',
@@ -30,10 +32,8 @@ const products: Product[] = [
     name: 'Bella Fantasy Collection',
     brand: 'ROMANTIX',
     price: 2499,
-    image:
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=600&h=800&fit=crop',
+    image: slimImage,
+    hoverImage: slimImage,
     badges: ['new', 'limited'],
     specs: { height: '168', weight: '35', cup: 'E', material: 'silicone' },
     collection: 'fantasy',
@@ -45,10 +45,8 @@ const products: Product[] = [
     brand: 'ROMANTIX',
     price: 1299,
     compareAtPrice: 1699,
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1496440737103-cd596325d314?w=600&h=800&fit=crop',
+    image: blackWhiteImage,
+    hoverImage: blackWhiteImage,
     badges: ['sale'],
     specs: { height: '158', weight: '28', cup: 'C', material: 'tpe' },
     collection: 'sensual',
@@ -59,10 +57,8 @@ const products: Product[] = [
     name: 'Sakura Anime Edition',
     brand: 'ROMANTIX Fantasy',
     price: 1599,
-    image:
-      'https://images.unsplash.com/photo-1512310604669-443f26c35f52?w=600&h=800&fit=crop',
-    hoverImage:
-      'https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=600&h=800&fit=crop',
+    image: farmImage,
+    hoverImage: farmImage,
     badges: ['new'],
     specs: { height: '155', weight: '26', cup: 'B', material: 'silicone' },
     collection: 'anime',
